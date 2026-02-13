@@ -1,24 +1,18 @@
-const logs=[
-"[BOOT] Initializing kernel...",
-"[OK] Loading STM32 drivers",
-"[OK] Mounting /firmware",
-"[OK] Starting Ethernet PHY validation",
-"[OK] Initializing CAN interface",
-"[OK] System Ready."
-];
+const input=document.getElementById("terminalInput");
+const output=document.getElementById("terminalOutput");
 
-let i=0;
-const boot=document.getElementById("bootText");
+const commands={
+help:"about skills contact",
+about:"Embedded Systems Engineer | Automotive Ethernet | Firmware Validation",
+skills:"STM32 | CAN | Ethernet | MDIO | Linux | Embedded C",
+contact:"Email: shresp3002@gmail.com"
+};
 
-function bootSequence(){
-  if(i<logs.length){
-    boot.innerHTML+=logs[i]+"\n";
-    i++;
-    setTimeout(bootSequence,500);
-  }else{
-    setTimeout(()=>{
-      document.getElementById("bootTerminal").style.display="none";
-    },1000);
-  }
+input.addEventListener("keydown",e=>{
+if(e.key==="Enter"){
+let cmd=input.value.trim();
+output.innerHTML+="<div>> "+cmd+"</div>";
+output.innerHTML+="<div>"+(commands[cmd]||"Unknown command")+"</div>";
+input.value="";
 }
-bootSequence();
+});
