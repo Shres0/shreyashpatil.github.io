@@ -3,53 +3,113 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shreyash Patil | Embedded Engineer</title>
+<title>Booting Shreyash Patil | Embedded Systems Engineer</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<canvas id="particleCanvas"></canvas>
-<div class="scanlines"></div>
+<canvas id="chipCanvas"></canvas>
+<div class="overlay"></div>
+<div id="probeCursor"></div>
 
-<!-- BOOT TERMINAL -->
-<div id="bootTerminal">
-  <pre id="bootText"></pre>
+<!-- BOOT SCREEN -->
+<div id="bootScreen">
+  <pre id="bootLog"></pre>
 </div>
 
 <!-- MAIN CONTENT -->
 <div id="mainContent">
 
 <section>
-  <h1 class="glitch" data-text="Shreyash Patil">Shreyash Patil</h1>
-  <h2>Embedded Systems & Firmware Engineer</h2>
+  <h1>Booting: Shreyash Patil</h1>
+  <h2>Stage 1: Power On (POST)</h2>
+  <p>
+    Just like a system powers up from firmware and hardware integrity checks,
+    my foundation began with Electronics & Telecommunication Engineering (SPPU, CGPA 7.94)
+    and deep specialization in Embedded Systems at CDAC.
+  </p>
   <a href="Shreyash_Patil_Resume_lv.pdf" class="btn" download>Download Resume</a>
 </section>
 
 <section>
-  <h2>Live GitHub Projects</h2>
-  <div id="githubProjects" class="grid"></div>
+  <h2>Stage 2: Bootloader (GRUB)</h2>
+  <p>
+    The bootloader selects the operating system.  
+    This stage represents choosing the Embedded Systems domain —
+    transitioning into Automotive Ethernet PHY validation and firmware integration.
+  </p>
 </section>
 
 <section>
-  <h2>Embedded Terminal</h2>
-  <div id="terminalBox">
-    <div id="output"></div>
-    <input type="text" id="command" placeholder="Type command...">
+  <h2>Stage 3: Kernel Initialization</h2>
+  <p>
+    Kernel initializes drivers and hardware interfaces.
+    At Ethernovia, I work on:
+  </p>
+  <ul>
+    <li>Automotive Ethernet PHY validation</li>
+    <li>MDIO-based configuration</li>
+    <li>Board-level debugging</li>
+    <li>Interoperability testing</li>
+    <li>Automation & firmware modularization</li>
+  </ul>
+
+  <div class="meme">
+    <p><em>“Works in simulation” vs “Validated on silicon under automotive temperature.”</em></p>
   </div>
+</section>
+
+<section>
+  <h2>Stage 4: Init System (systemd)</h2>
+  <p>
+    Services start and system becomes functional.
+    These represent major projects:
+  </p>
+
+  <ul>
+    <li><strong>COVAS</strong> – Dual STM32F407 CAN-based vehicle automation</li>
+    <li><strong>LiDAR System</strong> – Real-time obstacle detection & braking logic</li>
+    <li><strong>DoorMate</strong> – IoT-based RFID access control</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Stage 5: User Space</h2>
+  <p>
+    System ready for interaction.
+  </p>
+
+  <div id="githubProjects"></div>
+
+  <div id="terminalBox">
+    <div id="terminalOutput"></div>
+    <input type="text" id="terminalInput" placeholder="Type: help">
+  </div>
+</section>
+
+<section>
+  <h2>Networking Stack</h2>
+  <p>
+    Just like networking initializes last,
+    this section connects you to me.
+  </p>
+
+  <p>Email: shresp3002@gmail.com</p>
+  <p>GitHub: github.com/Shres0</p>
+  <p>LinkedIn: linkedin.com/in/shreyash-patil2002</p>
 </section>
 
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script src="js/particles.js"></script>
-<script src="js/terminal.js"></script>
+<script src="js/boot.js"></script>
+<script src="js/powerchip.js"></script>
 <script src="js/github.js"></script>
-<script src="js/chip3d.js"></script>
-<script src="js/terminalConsole.js"></script>
+<script src="js/terminal.js"></script>
 <script src="js/scroll.js"></script>
+<script src="js/cursor.js"></script>
 
 </body>
 </html>
