@@ -3,239 +3,231 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shreyash Patil | Embedded Systems Engineer</title>
+<title>Shreyash Patil | Embedded Engineer</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
-:root {
-    --bg: #0d1117;
-    --card: #161b22;
-    --accent: #00ffcc;
-    --text: #e6edf3;
-    --muted: #8b949e;
+:root{
+  --bg:#000;
+  --text:#fff;
+  --gray:#aaa;
 }
 
-* { margin:0; padding:0; box-sizing:border-box; }
-
-body {
-    font-family: 'Inter', sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
 }
 
-.container {
-    width: 85%;
-    max-width: 1100px;
-    margin: auto;
+body{
+  font-family:'Space Grotesk', sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  overflow-x:hidden;
 }
 
-section {
-    padding: 80px 0;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s ease;
+/* Cursor Cat */
+.cat{
+  position:fixed;
+  width:40px;
+  pointer-events:none;
+  z-index:9999;
+  transition:transform 0.1s linear;
 }
 
-section.show {
-    opacity: 1;
-    transform: translateY(0);
+section{
+  min-height:100vh;
+  padding:100px 10%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  opacity:0;
+  transform:translateY(40px);
+  transition:1s ease;
 }
 
-h1, h2 {
-    margin-bottom: 20px;
+section.show{
+  opacity:1;
+  transform:translateY(0);
 }
 
-h1 {
-    font-size: 42px;
+h1{
+  font-size:60px;
+  font-weight:700;
 }
 
-h2 {
-    font-size: 28px;
-    color: var(--accent);
+h2{
+  font-size:36px;
+  margin-bottom:20px;
 }
 
-.hero {
-    text-align: center;
-    padding: 120px 0;
+p{
+  font-size:18px;
+  color:var(--gray);
+  line-height:1.7;
+  max-width:700px;
 }
 
-.hero p {
-    color: var(--muted);
-    font-size: 18px;
+.btn{
+  display:inline-block;
+  margin-top:30px;
+  padding:12px 30px;
+  border:2px solid #fff;
+  color:#fff;
+  text-decoration:none;
+  transition:0.3s;
 }
 
-.buttons {
-    margin-top: 30px;
+.btn:hover{
+  background:#fff;
+  color:#000;
 }
 
-.btn {
-    display: inline-block;
-    padding: 12px 24px;
-    margin: 10px;
-    background: var(--accent);
-    color: #000;
-    text-decoration: none;
-    font-weight: 600;
-    border-radius: 6px;
-    transition: 0.3s;
+.meme{
+  margin-top:40px;
+  max-width:400px;
+  filter:grayscale(100%);
 }
 
-.btn:hover {
-    background: #00ccaa;
-    transform: translateY(-3px);
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+  margin-top:40px;
 }
 
-.card {
-    background: var(--card);
-    padding: 25px;
-    border-radius: 10px;
-    margin-bottom: 25px;
-    transition: 0.3s;
+.card{
+  border:1px solid #fff;
+  padding:25px;
+  transition:0.3s;
 }
 
-.card:hover {
-    transform: translateY(-5px);
+.card:hover{
+  background:#fff;
+  color:#000;
 }
 
-.code {
-    font-family: 'JetBrains Mono', monospace;
-    background: #111;
-    padding: 10px;
-    border-radius: 6px;
-    color: var(--accent);
-}
-
-footer {
-    text-align: center;
-    padding: 40px;
-    color: var(--muted);
+footer{
+  text-align:center;
+  padding:40px;
+  color:var(--gray);
 }
 </style>
 </head>
 <body>
 
-<div class="container">
+<img src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif" class="cat" id="cat">
 
 <!-- HERO -->
-<section class="hero">
-    <h1>Shreyash Patil</h1>
-    <p>Embedded Systems & Firmware Engineer</p>
-    <p>Automotive Ethernet | STM32 | CAN | Linux | Future Semiconductor Systems Engineer</p>
-
-    <div class="buttons">
-        <a href="#projects" class="btn">View Projects</a>
-        <a href="Shreyash_Patil_Resume_lv.pdf" class="btn" download>Download Resume</a>
-    </div>
+<section>
+  <h1>Shreyash Patil</h1>
+  <h2>Embedded Systems & Firmware Engineer</h2>
+  <p>
+    Automotive Ethernet | STM32 | CAN | Linux  
+    Engineering systems that actually work on hardware.
+  </p>
+  <a href="Shreyash_Patil_Resume_lv.pdf" class="btn" download>Download Resume</a>
 </section>
 
 <!-- ABOUT -->
 <section>
-    <h2>About</h2>
-    <div class="card">
-        <p>
-            Embedded Systems Engineer with hands-on experience in Automotive Ethernet PHY validation,
-            firmware integration, and board-level debugging. Strong foundation in Embedded C/C++,
-            STM32-based systems, MDIO configuration, and cross-layer debugging.
-        </p>
-        <br>
-        <div class="code">
-            // I don't debug code.  
-            // I debug hardware-software relationships.
-        </div>
-    </div>
+  <h2>About Me</h2>
+  <p>
+    Engineer focused on firmware validation, automotive Ethernet PHY integration,
+    and board-level debugging. Comfortable working close to silicon and solving
+    cross-layer hardware-software issues.
+  </p>
+
+  <img src="https://media.giphy.com/media/3o7btPCcdNniyf0ArS/giphy.gif" class="meme">
+
+  <p>
+    When firmware works in simulation but fails on hardware —
+    that’s where real engineering begins.
+  </p>
 </section>
 
 <!-- EXPERIENCE -->
 <section>
-    <h2>Experience</h2>
+  <h2>Experience</h2>
+  <div class="grid">
     <div class="card">
-        <h3>Ethernovia – Trainee Engineer (Embedded Systems)</h3>
-        <p>
-            • Automotive Ethernet PHY validation & firmware integration<br>
-            • Board bring-up & MDIO-based configuration<br>
-            • Interoperability testing across vendors and link speeds<br>
-            • Validation under automotive temperature conditions<br>
-            • Firmware refactoring and test automation improvements
-        </p>
+      <h3>Ethernovia</h3>
+      <p>
+        Automotive Ethernet PHY validation, MDIO configuration,
+        board bring-up, firmware integration, interoperability testing.
+      </p>
     </div>
+    <div class="card">
+      <h3>Firmware Optimization</h3>
+      <p>
+        Refactoring embedded modules, improving maintainability,
+        validating across automotive temperature conditions.
+      </p>
+    </div>
+  </div>
 </section>
 
 <!-- PROJECTS -->
-<section id="projects">
-    <h2>Projects</h2>
-
-    <div class="card">
-        <h3>COVAS – STM32 Dual ECU System (CAN)</h3>
-        <p>
-            Dual STM32F407 architecture with CAN-based real-time communication.
-            Sensor ECU transmits ultrasonic & environmental data.
-            Control ECU processes & displays data via UART.
-        </p>
-    </div>
-
-    <div class="card">
-        <h3>LiDAR Accident Prevention System</h3>
-        <p>
-            Real-time obstacle detection and automatic braking logic.
-            Integrated LiDAR with microcontroller for collision risk reduction.
-        </p>
-    </div>
-
-    <div class="card">
-        <h3>DoorMate – IoT RFID Access Control</h3>
-        <p>
-            RFID-based smart lock system with IoT monitoring & real-time access logging.
-        </p>
-    </div>
-
-</section>
-
-<!-- MEME SECTION -->
 <section>
-    <h2>Engineering Reality</h2>
+  <h2>Projects</h2>
+  <div class="grid">
     <div class="card">
-        <p>
-            When the firmware works on simulation but not on hardware:
-        </p>
-        <br>
-        <img src="https://media.giphy.com/media/26BRuo6sLetdllPAQ/giphy.gif" width="300">
-        <br><br>
-        <div class="code">
-            printf("Why is this not working?");  
-            // Because hardware has opinions.
-        </div>
+      <h3>COVAS – STM32 CAN System</h3>
+      <p>
+        Dual ECU communication using CAN protocol
+        for collision avoidance and vehicle automation.
+      </p>
     </div>
+
+    <div class="card">
+      <h3>LiDAR Accident Prevention</h3>
+      <p>
+        Real-time obstacle detection with automatic braking logic.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>DoorMate – IoT RFID Lock</h3>
+      <p>
+        RFID-based access control with real-time monitoring.
+      </p>
+    </div>
+  </div>
+
+  <img src="https://media.giphy.com/media/l0HlBO7eyXzSZkJri/giphy.gif" class="meme">
 </section>
 
 <!-- CONTACT -->
 <section>
-    <h2>Contact</h2>
-    <div class="card">
-        <p>Email: shresp3002@gmail.com</p>
-        <p>GitHub: github.com/Shres0</p>
-        <p>LinkedIn: linkedin.com/in/shreyash-patil2002</p>
-    </div>
+  <h2>Contact</h2>
+  <p>Email: shresp3002@gmail.com</p>
+  <p>GitHub: github.com/Shres0</p>
+  <p>LinkedIn: linkedin.com/in/shreyash-patil2002</p>
 </section>
 
 <footer>
-    © 2026 Shreyash Patil | Built with Embedded Discipline
+  © 2026 Shreyash Patil — Built with Discipline.
 </footer>
 
-</div>
-
 <script>
+/* Scroll Reveal */
 const sections = document.querySelectorAll("section");
+window.addEventListener("scroll",()=>{
+  const trigger = window.innerHeight * 0.85;
+  sections.forEach(sec=>{
+    const top = sec.getBoundingClientRect().top;
+    if(top < trigger){
+      sec.classList.add("show");
+    }
+  });
+});
 
-window.addEventListener("scroll", () => {
-    sections.forEach(sec => {
-        const top = window.scrollY;
-        const offset = sec.offsetTop - 600;
-        if (top > offset) {
-            sec.classList.add("show");
-        }
-    });
+/* Cursor Cat Tracker */
+const cat = document.getElementById("cat");
+document.addEventListener("mousemove", (e)=>{
+  cat.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
 });
 </script>
 
